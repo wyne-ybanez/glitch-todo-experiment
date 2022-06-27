@@ -12,17 +12,22 @@
     </thead>
     <tbody>
       <div class="ui bulleted list">
-        {{ #each todolist }}
-        <tr>
-          <td>{{title}}</td>
-        </tr>
+        {{#each todolist}}
+          <tr>
+            <td>{{title}}</td>
+          </tr>
         {{/each}}
       </div>
     </tbody>
   </table>
 </section>
 
-<form class="ui stacked segment form" action="/dashboard/todo" method="POST">
-  
-
+<form class="ui stacked segment form" action="/dashboard/addtodo" method="POST">
+  <div class="field">
+    <label>Title</label>
+    <input placeholder="Title" type="text" name="title" />
+  </div>
+  <button class="ui blue submit button">
+    Add Item
+  </button>
 </form>
